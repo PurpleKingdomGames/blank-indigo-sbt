@@ -11,7 +11,7 @@
 //   def initialScene(bootData: Unit): Option[SceneName] =
 //     None
 
-//   def scenes(bootData: Unit): NonEmptyList[Scene[Unit, Unit]] =
+//   def scenes(bootData: Unit): NonEmptyList[Scene[Unit, Unit, Unit]] =
 //     NonEmptyList(EmptyScene)
 
 //   def setup(bootData: Unit, assetCollection: AssetCollection, dice: Dice): Startup[StartupErrors, Unit] =
@@ -25,7 +25,7 @@
 
 // }
 
-// object EmptyScene extends Scene[Unit, Unit] {
+// object EmptyScene extends Scene[Unit, Unit, Unit] {
 
 //   type SceneModel     = Unit
 //   type SceneViewModel = Unit
@@ -33,22 +33,29 @@
 //   val name: SceneName =
 //     SceneName("empty")
 
-//   val sceneModelLens: Lens[Unit, Unit] =
+//   val modelLens: Lens[Unit, Unit] =
 //     Lens.keepLatest
 
-//   val sceneViewModelLens: Lens[Unit, Unit] =
+//   val viewModelLens: Lens[Unit, Unit] =
 //     Lens.keepLatest
 
-//   val sceneSubSystems: Set[SubSystem] =
+//   val eventFilters: EventFilters =
+//     EventFilters.Default
+
+//   val subSystems: Set[SubSystem] =
 //     Set()
 
-//   def updateSceneModel(context: FrameContext, sceneModel: Unit): GlobalEvent => Outcome[Unit] =
-//     _ => Outcome(sceneModel)
+//   def updateModel(context: FrameContext[Unit], model: Unit): GlobalEvent => Outcome[Unit] =
+//     _ => Outcome(model)
 
-//   def updateSceneViewModel(context: FrameContext, sceneModel: Unit, sceneViewModel: Unit): Outcome[Unit] =
-//     Outcome(sceneViewModel)
+//   def updateViewModel(
+//       context: FrameContext[Unit],
+//       model: Unit,
+//       viewModel: Unit
+//   ): GlobalEvent => Outcome[Unit] =
+//     _ => Outcome(viewModel)
 
-//   def updateSceneView(context: FrameContext, sceneModel: Unit, sceneViewModel: Unit): SceneUpdateFragment =
+//   def present(context: FrameContext[Unit], model: Unit, viewModel: Unit): SceneUpdateFragment =
 //     SceneUpdateFragment.empty
 
 // }
