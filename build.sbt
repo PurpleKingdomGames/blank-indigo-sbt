@@ -18,11 +18,11 @@ lazy val mygame =
       title := "My Game - Made with Indigo",
       gameAssetsDirectory := "assets",
       libraryDependencies ++= Seq(
-        "io.indigoengine" %%% "indigo-json-circe" % "0.2.0",
-        "io.indigoengine" %%% "indigo"            % "0.2.0",
-        "io.indigoengine" %%% "indigo-extras"     % "0.2.0"
+        "io.indigoengine" %%% "indigo-json-circe" % "0.3.0",
+        "io.indigoengine" %%% "indigo"            % "0.3.0",
+        "io.indigoengine" %%% "indigo-extras"     % "0.3.0"
       )
     )
 
-addCommandAlias("buildGame", ";compile;fastOptJS;indigoBuildJS")
-addCommandAlias("publishGame", ";compile;fullOptJS;indigoPublishJS")
+addCommandAlias("buildGame", ";compile;fastOptJS;indigoBuild")
+addCommandAlias("runGame", ";compile;fastOptJS;indigoRun")
