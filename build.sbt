@@ -1,4 +1,3 @@
-
 lazy val mygame =
   (project in file("."))
     .enablePlugins(ScalaJSPlugin, SbtIndigo)
@@ -17,6 +16,8 @@ lazy val mygame =
       showCursor := true,
       title := "My Game - Made with Indigo",
       gameAssetsDirectory := "assets",
+      windowStartWidth := 550,
+      windowStartHeight := 400,
       libraryDependencies ++= Seq(
         "io.indigoengine" %%% "indigo-json-circe" % "0.3.0",
         "io.indigoengine" %%% "indigo"            % "0.3.0",
