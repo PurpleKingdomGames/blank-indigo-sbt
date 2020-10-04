@@ -14,7 +14,7 @@
 //   def scenes(bootData: Unit): NonEmptyList[Scene[Unit, Unit, Unit]] =
 //     NonEmptyList(EmptyScene)
 
-//   def setup(bootData: Unit, assetCollection: AssetCollection, dice: Dice): Startup[StartupErrors, Unit] =
+//   def setup(bootData: Unit, assetCollection: AssetCollection, dice: Dice): Startup[Unit] =
 //     Startup.Success(())
 
 //   def initialModel(startupData: Unit): Unit =

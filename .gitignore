@@ -14,3 +14,4 @@ src_managed
 .idea
 *.iml
 .vscode
+metals.sbt

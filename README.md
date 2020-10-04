@@ -28,7 +28,7 @@ Which will generate output similar to:
 
 ```bash
 > sbt buildGame
-[info] welcome to sbt 1.3.12 (AdoptOpenJdk Java 1.8.0_202)
+[info] welcome to sbt 1.3.13 (AdoptOpenJdk Java 1.8.0_202)
 (...)
 dirPath: /Users/(...)/blank-indigo-sbt/target/indigoBuild
 Copying assets...

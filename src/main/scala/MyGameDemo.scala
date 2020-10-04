@@ -16,7 +16,7 @@
 //   def initialViewModel(startupData: Unit, model: Unit): Unit =
 //     ()
 
-//   def setup(bootData: Unit, assetCollection: AssetCollection, dice: Dice): Startup[StartupErrors, Unit] =
+//   def setup(bootData: Unit, assetCollection: AssetCollection, dice: Dice): Startup[Unit] =
 //     Startup.Success(())
 
 //   def updateModel(context: FrameContext[Unit], model: Unit): GlobalEvent => Outcome[Unit] =
