@@ -5,23 +5,35 @@
 // @JSExportTopLevel("IndigoGame")
 // object MyGameGame extends IndigoGame[Unit, Unit, Unit, Unit] {
 
-//   def boot(flags: Map[String, String]): BootResult[Unit] =
-//     BootResult(GameConfig.default, ())
-
 //   def initialScene(bootData: Unit): Option[SceneName] =
 //     None
 
 //   def scenes(bootData: Unit): NonEmptyList[Scene[Unit, Unit, Unit]] =
 //     NonEmptyList(EmptyScene)
 
-//   def setup(bootData: Unit, assetCollection: AssetCollection, dice: Dice): Startup[Unit] =
-//     Startup.Success(())
+//   val eventFilters: EventFilters =
+//     EventFilters.Permissive
 
-//   def initialModel(startupData: Unit): Unit =
-//     ()
+//   def boot(flags: Map[String, String]): Outcome[BootResult[Unit]] =
+//     Outcome(BootResult(GameConfig.default, ()))
 
-//   def initialViewModel(startupData: Unit, model: Unit): Unit =
-//     ()
+//   def initialModel(startupData: Unit): Outcome[Unit] =
+//     Outcome(())
+
+//   def initialViewModel(startupData: Unit, model: Unit): Outcome[Unit] =
+//     Outcome(())
+
+//   def setup(bootData: Unit, assetCollection: AssetCollection, dice: Dice): Outcome[Startup[Unit]] =
+//     Outcome(Startup.Success(()))
+
+//   def updateModel(context: FrameContext[Unit], model: Unit): GlobalEvent => Outcome[Unit] =
+//     _ => Outcome(model)
+
+//   def updateViewModel(context: FrameContext[Unit], model: Unit, viewModel: Unit): GlobalEvent => Outcome[Unit] =
+//     _ => Outcome(viewModel)
+
+//   def present(context: FrameContext[Unit], model: Unit, viewModel: Unit): Outcome[SceneUpdateFragment] =
+//     Outcome(SceneUpdateFragment.empty)
 
 // }
 
@@ -40,7 +52,7 @@
 //     Lens.keepLatest
 
 //   val eventFilters: EventFilters =
-//     EventFilters.Default
+//     EventFilters.Permissive
 
 //   val subSystems: Set[SubSystem] =
 //     Set()
@@ -55,7 +67,7 @@
 //   ): GlobalEvent => Outcome[Unit] =
 //     _ => Outcome(viewModel)
 
-//   def present(context: FrameContext[Unit], model: Unit, viewModel: Unit): SceneUpdateFragment =
-//     SceneUpdateFragment.empty
+//   def present(context: FrameContext[Unit], model: Unit, viewModel: Unit): Outcome[SceneUpdateFragment] =
+//     Outcome(SceneUpdateFragment.empty)
 
 // }
