@@ -6,10 +6,10 @@ lazy val mygame =
     .settings( // Normal SBT settings
       name := "mygame",
       version := "0.0.1",
-      scalaVersion := "3.0.0",
+      scalaVersion := "3.0.2",
       organization := "mygame",
       libraryDependencies ++= Seq(
-        "org.scalameta" %%% "munit" % "0.7.26" % Test
+        "org.scalameta" %%% "munit" % "0.7.29" % Test
       ),
       testFrameworks += new TestFramework("munit.Framework")
     )
@@ -20,9 +20,9 @@ lazy val mygame =
       windowStartWidth := 550,
       windowStartHeight := 400,
       libraryDependencies ++= Seq(
-        "io.indigoengine" %%% "indigo-json-circe" % "0.9.0",
-        "io.indigoengine" %%% "indigo"            % "0.9.0",
-        "io.indigoengine" %%% "indigo-extras"     % "0.9.0"
+        "io.indigoengine" %%% "indigo-json-circe" % "0.9.1",
+        "io.indigoengine" %%% "indigo"            % "0.9.1",
+        "io.indigoengine" %%% "indigo-extras"     % "0.9.1"
       )
     )
 
