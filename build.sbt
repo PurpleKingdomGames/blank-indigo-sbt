@@ -4,8 +4,8 @@ lazy val mygame =
   (project in file("."))
     .enablePlugins(ScalaJSPlugin, SbtIndigo)
     .settings( // Normal SBT settings
-      name := "mygame",
-      version := "0.0.1",
+      name         := "mygame",
+      version      := "0.0.1",
       scalaVersion := "3.0.2",
       organization := "mygame",
       libraryDependencies ++= Seq(
@@ -14,15 +14,15 @@ lazy val mygame =
       testFrameworks += new TestFramework("munit.Framework")
     )
     .settings( // Indigo specific settings
-      showCursor := true,
-      title := "My Game - Made with Indigo",
+      showCursor          := true,
+      title               := "My Game - Made with Indigo",
       gameAssetsDirectory := "assets",
-      windowStartWidth := 550,
-      windowStartHeight := 400,
+      windowStartWidth    := 550,
+      windowStartHeight   := 400,
       libraryDependencies ++= Seq(
-        "io.indigoengine" %%% "indigo-json-circe" % "0.9.1",
-        "io.indigoengine" %%% "indigo"            % "0.9.1",
-        "io.indigoengine" %%% "indigo-extras"     % "0.9.1"
+        "io.indigoengine" %%% "indigo-json-circe" % "0.9.2",
+        "io.indigoengine" %%% "indigo"            % "0.9.2",
+        "io.indigoengine" %%% "indigo-extras"     % "0.9.2"
       )
     )
 
