@@ -1,4 +1,14 @@
-# "Blank Indigo Game Template for SBT"
+# Archived & Replaced! ("Blank Indigo Game Template for sbt")
+
+## For sbt
+
+Please use the [Indigo g8 template](https://github.com/PurpleKingdomGames/indigo.g8).
+
+## For Mill
+
+The [Mill version of this template](https://github.com/PurpleKingdomGames/blank-indigo-mill) is still being kept up to date until an equivalent g8 template is produced.
+
+---
 
 A template and aid to memory to bootstrap your game.
 
